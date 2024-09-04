@@ -1,0 +1,116 @@
+.image-card {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    color: white;
+    width: 100%;
+}
+
+.image-card .overlay {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.image-card .card-img-top {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.image-card:hover .overlay {
+    opacity: 1;
+}
+
+.image-card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.store-card {
+    height: auto; /* Adjust this value as needed */
+}
+.store-image-container {
+    width: 140px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.store-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logos-container {
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.logos-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+}
+
+.logo-link {
+    flex: 0 0 auto;
+    margin: 0 20px;
+}
+
+.logo-image-container {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover .logo-image {
+    transform: scale(1.1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
